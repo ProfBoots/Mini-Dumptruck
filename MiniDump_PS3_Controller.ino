@@ -56,7 +56,7 @@ if (abs(Ps3.event.analog_changed.stick.lx) + abs(Ps3.event.analog_changed.stick.
   Serial.print(Ps3.data.analog.stick.ly, DEC);
   Serial.println();
   int LYValue = Ps3.data.analog.stick.ly;
-  int adjustedThrottleValue = LYValue;
+  int adjustedThrottleValue = LYValue * 2;
   moveMotor(leftMotor0, leftMotor1, adjustedThrottleValue);
   moveMotor(rightMotor0, rightMotor1, adjustedThrottleValue);
 }
